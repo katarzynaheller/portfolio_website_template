@@ -93,6 +93,11 @@ ul {
     list-style: none;
 }
 
+img {
+    width: 80%;
+    height: auto;
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -130,7 +135,6 @@ ul {
 #hero-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 15em 5em;
     grid-template-areas:
         'profile-pic short-intro';
 }
@@ -138,8 +142,6 @@ ul {
 #profile_pic {
     display: block;
     margin: 0 auto;
-    height: 300px;
-    width: 300px;
     object-fit: cover;
     border: 2px solid var(--borderColor);
     grid-area: profile-pic;
@@ -147,7 +149,7 @@ ul {
 
 #short-intro {
     grid-area: short-intro;
-    width: 600px;
+    width: 40rem;
     margin-left: 40px;
 
 }
@@ -269,5 +271,12 @@ ul {
 @media screen and (max-width: 1200px) {
     .main-container {
         width: 95%;
+    }
+}
+
+/* hide video section on small screen*/
+@media only screen and (max-width: 600px) {
+    .video-wrapper {
+        display: none;
     }
 }
